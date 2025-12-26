@@ -34,8 +34,8 @@ Uses ThinkGear JSON stream:
 ---
 
 ## 📂 Directory Structure
+```
 
-'''
 NeuroSky_GetSignal/
 │
 ├── Assets/
@@ -50,7 +50,8 @@ NeuroSky_GetSignal/
 │
 ├── ProjectSettings/
 └── Packages/
-'''
+```
+
 
 ---
 
