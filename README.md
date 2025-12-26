@@ -57,14 +57,15 @@ NeuroSky_GetSignal/
 
 ## 🔧 How to Run
 
-### 1. Start ThinkGear Connector
-Install TGC from NeuroSky and run it.
 
-### 2. Pair the MindWave Mobile
+### 1. Pair the MindWave Mobile
 Connect via Bluetooth.
 
+### 2. Start ThinkGear Connector
+Install TGC from NeuroSky and run it.
+
 ### 3. Run Unity
-Open `SampleScene` → Press **Play**
+Open `DemoScene` → Press **Play**
 
 You will see:
 - Raw EEG waveform  
