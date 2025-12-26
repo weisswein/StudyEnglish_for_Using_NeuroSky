@@ -3,7 +3,7 @@
 ## 📡 Overview
 This project provides a **Unity-based real-time EEG acquisition and visualization system** using the **NeuroSky MindWave Mobile** device.
 
-Developed for **Tokyo Hackathon 2025**, this tool is ideal for:
+this tool is ideal for:
 - BCI prototyping  
 - Real-time EEG monitoring  
 - Educational demos  
@@ -34,6 +34,8 @@ Uses ThinkGear JSON stream:
 ---
 
 ## 📂 Directory Structure
+
+'''
 NeuroSky_GetSignal/
 │
 ├── Assets/
@@ -48,7 +50,7 @@ NeuroSky_GetSignal/
 │
 ├── ProjectSettings/
 └── Packages/
-
+'''
 
 ---
 
@@ -82,7 +84,7 @@ Logs are stored as:
 ---
 
 ## 🛠 Requirements
-- Unity 2021.3+
+- Unity 2022.3.58f1
 - Windows 10/11
 - NeuroSky MindWave Mobile
 - ThinkGear Connector
