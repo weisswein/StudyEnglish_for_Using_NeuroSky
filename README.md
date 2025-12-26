@@ -1,118 +1,97 @@
-# StudyEnglish_for_Using_NeuroSky
-This project is a preliminary experiment to explore the possibility of using Neurosky for effective English learning.
-NeuroSky_GetSignal — Unity EEG Acquisition Project
-📡 Overview
+# NeuroSky_GetSignal — Unity EEG Acquisition Project
 
-This project provides a Unity-based real-time EEG acquisition and visualization system using the NeuroSky MindWave Mobile device.
-It is designed for educational use, hackathons, and Brain–Computer Interface (BCI) prototyping.
+## 📡 Overview
+This project provides a **Unity-based real-time EEG acquisition and visualization system** using the **NeuroSky MindWave Mobile** device.
 
-The repository includes:
+Developed for **Tokyo Hackathon 2025**, this tool is ideal for:
+- BCI prototyping  
+- Real-time EEG monitoring  
+- Educational demos  
+- Research experiments  
 
-Real-time EEG signal acquisition (raw EEG, eSense, EEG power bands)
+---
 
-JSON parsing via ThinkGear protocol
+## 🧠 Features
 
-Unity scripts for signal logging and visualization
+### ✔ Real-time EEG Signal Acquisition
+- Raw EEG  
+- Blink detection  
+- Attention / Meditation (eSense)  
+- EEG Power Bands  
 
-Experimental session logger
+Uses ThinkGear JSON stream:
 
-Sample GUI for monitoring attention, meditation, blink, and raw waveforms
+### ✔ Unity Integration
+- Real-time waveform plot (`LineRenderer`)
+- Prefabs for raw data and UI components
+- Stable, low-latency connection
 
-This project was developed during Tokyo Hackathon 2025.
+### ✔ Experiment Logging
+- Auto-saves logs into `Assets/Logs/`
+- CSV format (timestamped)
+- Easy to analyze with Python/MATLAB
 
-🧠 Features
-✔ 1. Real-time Signal Acquisition
+---
 
-Connects to MindWave mobile via ThinkGear Connector
-
-Supports raw, blink, attention, meditation, and power spectrums
-
-Stable JSON-based stream reader (enableRawOutput: true)
-
-✔ 2. Unity Integration
-
-Real-time visualization using LineRenderer
-
-Prefabs and scripts under Assets/Scripts
-
-Logging system under Assets/Logs/
-
-✔ 3. Experiment Logging
-
-Automatically records timestamped CSV logs
-
-Useful for later analysis (Python, MATLAB, EEG pipelines)
-
-✔ 4. Simple UI for monitoring EEG states
-
-Attention/meditation bar
-
-Raw signal plot
-
-Blink detection gate
-
-📂 Directory Structure
+## 📂 Directory Structure
 NeuroSky_GetSignal/
 │
 ├── Assets/
-│   ├── Scripts/
-│   │   ├── MindwaveManager.cs
-│   │   ├── MindwaveRawLineRenderer.cs
-│   │   ├── MindwaveSessionLogger.cs
-│   │   └── MindwaveBlinkGate.cs
-│   │
-│   ├── Scenes/
-│   ├── Plugins/
-│   └── Logs/
+│ ├── Scripts/
+│ │ ├── MindwaveManager.cs
+│ │ ├── MindwaveRawLineRenderer.cs
+│ │ ├── MindwaveSessionLogger.cs
+│ │ └── MindwaveBlinkGate.cs
+│ ├── Scenes/
+│ ├── Plugins/
+│ └── Logs/
 │
 ├── ProjectSettings/
 └── Packages/
 
 
-Unity 必須フォルダ（Assets / ProjectSettings / Packages）はすべて含まれています。
+---
 
-🔧 How to Run
-1. Install ThinkGear Connector
+## 🔧 How to Run
 
-Download from NeuroSky official website.
+### 1. Start ThinkGear Connector
+Install TGC from NeuroSky and run it.
 
-2. Start ThinkGear Connector
+### 2. Pair the MindWave Mobile
+Connect via Bluetooth.
 
-Wait until it shows:
+### 3. Run Unity
+Open `SampleScene` → Press **Play**
 
-"connected": true
+You will see:
+- Raw EEG waveform  
+- eSense values  
+- Blink detection  
+- Automatic logging  
 
-3. Run the Unity scene
+---
 
-Open SampleScene and press ▶（Play）
+## 💾 Log Format
 
-Real-time EEG stream will appear in Unity.
-
-💾 Logging
-
-Logs are automatically saved at:
-
-Assets/Logs/session_TIMESTAMP.csv
+Example CSV columns:
+timestamp, rawEEG, blinkStrength, attention, meditation, delta, theta, alpha, beta, gamma
 
 
-Contains:
+Logs are stored as:
 
-raw wave
+---
 
-blink strength
+## 🛠 Requirements
+- Unity 2021.3+
+- Windows 10/11
+- NeuroSky MindWave Mobile
+- ThinkGear Connector
 
-attention
+---
 
-meditation
+## 🙋‍♂️ Author
+**YK (Yusuke Kutsukake)**  
+Master’s student, SIT  
+Research: EEG-based BCI, Covert Speech Decoding, Source Imaging
 
-EEG band powers
-
-🛠 Requirements
-
-Unity 2021.3+
-
-NeuroSky MindWave Mobile
-
-ThinkGear Connector (TGC)
-
-Windows 10/11
+---
